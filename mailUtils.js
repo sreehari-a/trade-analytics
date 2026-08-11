@@ -72,6 +72,7 @@ async function processAccount(
           data: pdfBuffer,
           password: account.pdfPassword,
         });
+        console.log("PDF password used:", account.pdfPassword, account);
         const pdfText = await parser.getText();
         return pdfText.text;
       } catch (error) {
@@ -172,6 +173,7 @@ async function getAccountsData(startDate, endDate) {
   }));
   for (const acc of accounts) {
     try {
+      console.log(`Processing account: ${acc.email}`, accounts);
       const values = await processAccount(acc, startDate, endDate);
       return values;
     } catch (err) {
