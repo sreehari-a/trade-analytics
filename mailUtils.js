@@ -10,6 +10,7 @@ function extractNSEFNO(text) {
   const pattern =
     /NSEFNO-NCL\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(-?\d+\.\d+)\s+(-?\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)/;
 
+    console.log('extractNSEFNO', text)
   const match = text?.match(pattern);
 
   if (!match) {
