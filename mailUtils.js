@@ -10,7 +10,7 @@ function extractNSEFNO(text) {
   const pattern =
     /NSEFNO-NCL\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(-?\d+\.\d+)\s+(-?\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)\s+(\d+\.\d+)/;
 
-  const match = text.match(pattern);
+  const match = text?.match(pattern);
 
   if (!match) {
     return { error: "NSE FNO line not matched" };
